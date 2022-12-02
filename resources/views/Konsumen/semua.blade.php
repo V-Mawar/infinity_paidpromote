@@ -2,21 +2,45 @@
 
 @section("konten")
 
-    <h1>Semua Data</h1>
+<table class="table">
+<a href="{{ route("buat_Konsumen") }}">Add data</a>
+    <thead>
+        <tr>
+            <th scope="col">id</th>
+            <th scope="col">Nama</th>
+            <th scope="col">Email</th>
+            <th scope="col">Password</th>
+            <th scope="col">Level</th>
+            <th scope="col">Create at</th>
+            <th scope="col">Update at</th>
+            <th scope="col">Aksi</th>
+        </tr>
 
-    @foreach($data as $Konsumen)
-        Nama : {{ $Konsumen->nama }} <br>
-        NoHp: {{ $Konsumen->nohp }} <br>
-        Alamat: {{ $Konsumen->alamat }} <br>
-        Jenis Kelamin: {{ $Konsumen->jeniskelamin }} <br>
-        <a href="{{ route('ubah_Konsumen', ['id' => $Konsumen->id]) }}">Ubah</a>
-        <a href="{{ route('tampil_Konsumen', ['id' => $Konsumen->id]) }}">Tampil</a>
+    <thead>
+    <tbody>
+@foreach($data as $konsumen)
 
-        <form action="{{ route('hapus_Konsumen', ['id' => $Konsumen->id]) }}" method="post">
-            @csrf
-            @method('delete')
-            <button type="submit">Hapus</button>
-        </form>
-        <hr>
-    @endforeach
+<tr>
+    <th scope="row">{{ $konsumen->id}}</th>
+    <td>{{ $konsumen->nama }}</td>
+    <td>{{ $konsumen->nohp }}</td>
+    <td>{{ $konsumen->alamat }}</td>
+    <td>{{ $konsumen->jeniskelamin }}</td>
+    <td>{{ $konsumen->created_at }}</td>
+    <td>{{ $konsumen->updated_at }}</td>
+    <td>
+    <a href="{{ route("user_edit", ["id" => $konsumen->id]) }}">edit</a>
+
+<form action="{{ route("user_hapus", ["id" => $konsumen->id]) }}" method="post">
+   @csrf 
+   @method("delete")
+   <button type="submit">Hapus</button>
+</form>
+    </td>
+</tr>
+</tr>
+
+@endforeach
+</tbody>
+</table>
 @endsection 
