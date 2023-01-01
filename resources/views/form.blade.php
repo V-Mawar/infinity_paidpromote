@@ -16,10 +16,26 @@
  method="post">
 @csrf
 
-Nama : <input type="text" name="name"> <br>
+      <div class="mb-3">
+            <label class="form-label">Nama</label>
+            <input type="text" class="form-control" name="name">
+</div>
+<div class="mb-3">
+      <label class="form-label">Username</label>
+      <input type="text" class="form-control" name="username">
+</div>
+<div class="mb-3">
+      <label class="form-label">Password</label>
+      <input type="password" class="form-control" name="password">
+</div>
+<div class="mb-3">
+      <label class="form-label">Level</label>
+      <input type="text" class="form-control" name="level">
+</div>
+{{-- Nama : <input type="text" name="name"> <br>
 Username : <input type="text" name="username"> <br>
 Password : <input type="password" name="password"> <br>
-Level : <input type="text" name="level"> <br>
+Level : <input type="text" name="level"> <br> --}}
 
 <button type="submit">Simpan</button>
 

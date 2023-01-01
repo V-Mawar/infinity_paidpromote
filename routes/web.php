@@ -78,7 +78,7 @@ Route::get('/indexku', function () {
 Route::put("/update-user/{id}",[UserController::class,"update"])->name("user_update"); //URL From Edit
 
 Route::delete("/hapus-user/{id}",[UserController::class,"hapus"])->name("user_hapus"); //URL From hapus
-Route::get("/tampil-user/{id}",[UserController::class,"show"])->name("user_show"); //URL From Edit
+//URL From Edit
 
 Route::get("/login", [SecurityController::class, "formLogin"])->name("login");
 Route::post("/proses-login", [SecurityController::class, "prosesLogin"])->name("proses_login");
@@ -99,6 +99,7 @@ Route::get("Konsumen/semua", [KonsumenController::class, 'semua'])->name("semua_
 Route::get("Konsumen/ubah/{id}", [KonsumenController::class, 'ubah'])->name("ubah_Konsumen");
 Route::put("Konsumen/update/{id}", [KonsumenController::class, 'update'])->name("update_Konsumen");
 Route::delete("Konsumen/hapus/{id}", [KonsumenController::class, 'hapus'])->name("hapus_Konsumen");
+
 
 Route::get("Menu/buat", [MenuController::class, 'buat'])->name("buat_Menu");
 Route::post("Menu/simpan", [MenuController::class, 'simpan'])->name("simpan_Menu");
@@ -121,6 +122,9 @@ Route::middleware("auth")->group(function(){
     Route::get("/input-user",[UserController::class,"formInput"])->name("user_input"); //URL form input
     Route::post("/simpan-user",[UserController::class,"simpan"])->name("user_simpan"); //URL Simmpan
     Route::get("/edit-user/{id}",[UserController::class,"formEdit"])->name("user_edit"); //URL From Edit
+    Route::get("/tampil-user/{id}",[UserController::class,"show"])->name("user_show"); 
+    
+    
 });
 
 Route::get("Kreator/buat", [KreatorController::class, 'buat'])->name("buat_Kreator");

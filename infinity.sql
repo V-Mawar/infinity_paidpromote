@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 02 Des 2022 pada 13.25
+-- Waktu pembuatan: 01 Jan 2023 pada 13.32
 -- Versi server: 10.4.22-MariaDB
 -- Versi PHP: 8.1.2
 
@@ -60,7 +60,15 @@ CREATE TABLE `konsumen` (
 INSERT INTO `konsumen` (`id`, `nama`, `nohp`, `alamat`, `jeniskelamin`, `created_at`, `updated_at`) VALUES
 (1, 'abaa', '09654357', 'samarinda', 'laki', '2022-11-24 10:36:18', '2022-11-24 10:36:18'),
 (2, 'asda', 'asddas', 'asdas', 'asdasd', '2022-11-24 10:40:54', '2022-11-24 10:40:54'),
-(3, 'Lintang Mawar Bani', '12312', 'kutai', 'perempuan', '2022-12-02 04:15:34', '2022-12-02 04:15:34');
+(3, 'Lintang Mawar Bani', '12312', 'kutai', 'perempuan', '2022-12-02 04:15:34', '2022-12-02 04:15:34'),
+(4, 'anisa', '0239742232', 'kutai', 'perempuan', '2022-12-23 01:11:47', '2022-12-23 01:11:47'),
+(5, 'putra', '098239822', 'jember', 'laki laki', '2022-12-23 01:12:21', '2022-12-23 01:12:21'),
+(6, 'rada', '0897764564', 'samarinda', 'perempuan', '2022-12-23 01:13:07', '2022-12-23 01:13:07'),
+(7, 'desi', '086654564', 'palaran', 'perempuan', '2022-12-23 01:13:49', '2022-12-23 01:13:49'),
+(8, 'putri', '0253427532', 'tenggarong', 'perempuan', '2022-12-23 01:14:20', '2022-12-23 01:14:20'),
+(9, 'reza', '0824432535', 'samarinda', 'laki laki', '2022-12-23 01:14:47', '2022-12-23 01:14:47'),
+(10, 'andhika', '08524836482', 'pekalongan', 'laki laki', '2022-12-23 01:15:41', '2022-12-23 01:15:41'),
+(11, 'zara', 'zara dila', 'samarinda', 'perempuan', '2022-12-29 08:28:14', '2022-12-29 08:28:14');
 
 -- --------------------------------------------------------
 
@@ -83,7 +91,7 @@ CREATE TABLE `kreator` (
 --
 
 INSERT INTO `kreator` (`id`, `nama`, `nohp`, `alamat`, `jeniskelamin`, `created_at`, `updated_at`) VALUES
-(1, 'asd', 'asdas', 'asdasd', 'asdasd', '2022-11-24 10:08:00', '2022-11-24 10:08:00'),
+(1, 'Hani', '0387236821', 'samarinda', 'perempuan', '2022-11-24 10:08:00', '2022-12-29 07:20:10'),
 (2, 'asd', 'asdas', 'asdasd', 'asdasd', '2022-11-24 10:14:03', '2022-11-24 10:14:03'),
 (3, 'Estetika', '12312', 'asdasd', 'laki', '2022-11-24 10:14:17', '2022-11-24 10:14:17'),
 (4, 'asd', 'asds', 'sa', 'asd', '2022-11-24 10:38:04', '2022-11-24 10:38:04'),
@@ -93,7 +101,10 @@ INSERT INTO `kreator` (`id`, `nama`, `nohp`, `alamat`, `jeniskelamin`, `created_
 (9, 'Zara', '083643321', 'berau', 'perempuan', '2022-11-25 06:21:27', '2022-11-25 06:21:27'),
 (10, 'Estetika', '1029473864', 'Batang', 'perempuan', '2022-11-27 22:09:20', '2022-11-27 22:09:20'),
 (11, 'Estetika', '1029473864', 'Batang', 'perempuan', '2022-11-27 22:11:54', '2022-11-27 22:11:54'),
-(12, 'akmal', '029375223', 'tenggarong', 'laki laki', '2022-11-28 03:37:06', '2022-11-28 03:37:06');
+(12, 'akmal', '029375223', 'tenggarong', 'laki laki', '2022-11-28 03:37:06', '2022-11-28 03:37:06'),
+(13, 'Fatma Dewi', '0821192188', 'Jepara', 'perempuan', '2022-12-18 06:03:49', '2022-12-18 06:03:49'),
+(14, 'zaki', '0979375', 'kutai', 'laki laki', '2022-12-23 01:41:46', '2022-12-23 01:41:46'),
+(15, 'dika', '087234982', 'pekalongan', 'laki laki', '2022-12-23 01:42:13', '2022-12-29 08:27:27');
 
 -- --------------------------------------------------------
 
@@ -115,8 +126,9 @@ CREATE TABLE `menu` (
 --
 
 INSERT INTO `menu` (`id`, `nama`, `harga`, `materi`, `created_at`, `updated_at`) VALUES
-(1, 'Premium', '200.000', 'Vidio', '2022-11-24 21:06:35', '2022-11-24 21:06:35'),
-(2, 'Biasa', '50000', 'Gambar', '2022-11-24 21:54:40', '2022-11-24 21:54:40');
+(1, 'Premium', '250.000', 'vidio/poster', '2022-11-24 21:06:35', '2022-12-23 01:38:35'),
+(2, 'Biasa', '50000', 'Gambar', '2022-11-24 21:54:40', '2022-11-24 21:54:40'),
+(3, 'instastory', '30.000', 'poster', '2022-12-23 01:39:21', '2022-12-23 01:39:21');
 
 -- --------------------------------------------------------
 
@@ -196,7 +208,12 @@ CREATE TABLE `promo` (
 --
 
 INSERT INTO `promo` (`id`, `nama`, `harga`, `materi`, `created_at`, `updated_at`) VALUES
-(2, 'Happy New Year', '150.000', 'Vidio dan Gambar/Poster', '2022-11-24 22:03:10', '2022-11-24 22:03:10');
+(2, 'Happy New Year', '150.000', 'Vidio dan Gambar/Poster', '2022-11-24 22:03:10', '2022-11-24 22:03:10'),
+(3, 'Ramadhan', '500.000', 'Vidio,poster,gambar', '2022-12-23 01:55:12', '2022-12-23 01:55:12'),
+(4, 'Natal', '120.000', 'poster', '2022-12-26 01:35:57', '2022-12-26 01:35:57'),
+(5, 'Happy', '120.000', 'poster', '2022-12-26 01:36:38', '2022-12-26 01:36:38'),
+(6, 'Bokek', '50.000', 'gambar', '2022-12-26 01:40:03', '2022-12-26 01:40:03'),
+(7, 'Big Sale 12.12', '120.000', 'vidio dan poster', '2022-12-29 08:29:17', '2022-12-29 08:29:17');
 
 -- --------------------------------------------------------
 
@@ -220,10 +237,14 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `username`, `password`, `level`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'lintang', 'lintg.m', '12345678', 'admin', NULL, '2022-11-25 07:14:36', '2022-11-25 07:14:36'),
-(2, 'Dian', 'dian1', '123456', 'admin', NULL, '2022-11-25 07:24:25', '2022-11-25 07:24:25'),
 (3, 'Estetika', 'Teti', '12345678', 'admin', NULL, '2022-11-28 01:47:27', '2022-11-28 01:47:27'),
-(4, 'rani', 'ani1', '12345678', 'admin', NULL, '2022-11-28 03:36:22', '2022-11-28 03:36:22');
+(5, 'fatma', 'fatma cantik', '123456', 'admin', NULL, '2022-12-18 06:02:42', '2022-12-18 06:02:42'),
+(6, 'dewi', 'santi', '123456', 'admin', NULL, '2022-12-23 01:24:53', '2022-12-23 01:24:53'),
+(7, 'Fitri', 'ratu', '123456', 'admin', NULL, '2022-12-23 01:26:04', '2022-12-23 01:26:04'),
+(8, 'Puspita', 'Indah', '123456', 'admin', NULL, '2022-12-23 01:27:46', '2022-12-23 01:27:46'),
+(9, 'Fajar', 'Bayu', '123456', 'admin', NULL, '2022-12-23 01:28:19', '2022-12-23 01:28:19'),
+(10, 'Intan', 'permata', '123456', 'admin', NULL, '2022-12-23 01:28:54', '2022-12-23 01:28:54'),
+(12, 'wiku', 'wiku tria', '123456', 'admin', NULL, '2022-12-29 08:26:51', '2022-12-29 08:26:51');
 
 --
 -- Indexes for dumped tables
@@ -301,19 +322,19 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT untuk tabel `konsumen`
 --
 ALTER TABLE `konsumen`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT untuk tabel `kreator`
 --
 ALTER TABLE `kreator`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT untuk tabel `menu`
 --
 ALTER TABLE `menu`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `migrations`
@@ -331,13 +352,13 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT untuk tabel `promo`
 --
 ALTER TABLE `promo`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

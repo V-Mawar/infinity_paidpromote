@@ -3,7 +3,7 @@
 @section("konten")
 
 <table class="table">
-<a href="{{ route("buat_Konsumen") }}">Add data</a>
+<a href="{{ route("buat_Konsumen") }}" class="btn btn-success">Add data</a>
     <thead>
         <tr>
             <th scope="col">id</th>
@@ -29,12 +29,14 @@
     <td>{{ $konsumen->created_at }}</td>
     <td>{{ $konsumen->updated_at }}</td>
     <td>
-    <a href="{{ route("user_edit", ["id" => $konsumen->id]) }}">edit</a>
+    <a href="{{ route("ubah_Konsumen", ["id" => $konsumen->id]) }}"class="btn btn-warning">edit</a>
+    <a href="{{ route("tampil_Konsumen", ["id"=> $konsumen->id]) }}"class="btn btn-info">tampil</a>
+
 
 <form action="{{ route("user_hapus", ["id" => $konsumen->id]) }}" method="post">
    @csrf 
    @method("delete")
-   <button type="submit">Hapus</button>
+   <button type="submit"class="btn btn-danger">Hapus</button>
 </form>
     </td>
 </tr>

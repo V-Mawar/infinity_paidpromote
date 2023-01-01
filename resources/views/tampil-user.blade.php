@@ -6,12 +6,11 @@
 
 
 <table class="table">
-<a href="{{ route("user_input") }}">Add data</a>
+<a href="{{ route("user_input") }}" class="btn btn-success">Add data</a>
     <thead>
         <tr>
             <th scope="col">id</th>
             <th scope="col">Nama</th>
-            <th scope="col">Email</th>
             <th scope="col">Password</th>
             <th scope="col">Level</th>
             <th scope="col">Create at</th>
@@ -26,18 +25,18 @@
 <tr>
     <th scope="row">{{ $user->id}}</th>
     <td>{{ $user->name }}</td>
-    <td>{{ $user->email }}</td>
     <td>{{ $user->password }}</td>
     <td>{{ $user->level }}</td>
     <td>{{ $user->created_at }}</td>
     <td>{{ $user->updated_at }}</td>
     <td>
-    <a href="{{ route("user_edit", ["id" => $user->id]) }}">edit</a>
+    <a href="{{ route("user_edit", ["id" => $user->id]) }}"class="btn btn-warning">edit</a>
+    <a href="{{ route("user_show", ["id"=> $user->id]) }}"class="btn btn-info">tampil</a>
 
 <form action="{{ route("user_hapus", ["id" => $user->id]) }}" method="post">
    @csrf 
    @method("delete")
-   <button type="submit">Hapus</button>
+   <button type="submit" class="btn btn-danger">Hapus</button>
 </form>
     </td>
 </tr>

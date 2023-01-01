@@ -60,7 +60,7 @@ public function hapus ($id)
 public function show ($id)
 {    
     $data_user = User::find($id);// ambil data pada table user berdasarkan id 
-    return view(view:"user.show")->with("data_user",$data_user);
+    return view(view:"show")->with("data_user",$data_user);
 }
 
 }
